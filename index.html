@@ -9,30 +9,29 @@
  
   
 <body>
-    <nav class="top-bar">
-        <h1>Coding Quiz</h1>
-        <button>View High Scores</button>
+    <nav class="top-bar"><h1>Coding Quiz</h1>
     </nav>
     <button class="start-btn">START QUIZ </button>
-  <section class="container">
+
+  <!-- <section class="container">
       <div class="container">
         <div id="questions-container" class="hide"></div>
-        <!-- <div class="controls">
+         <div class="controls">
             <button id="start-btn">Start Quiz</button>
         </div> -->
-    </div>
-  </section>
+    <!-- </div>
+  </section> --> 
 
   <main>
-    <section class="question-box container">
+    <section class="card word-guess">
         <h2 class="questionTitle">Question Here</h2>
-    <!-- <ul class="choices"> -->
-      <ul class="btn-grid"> 
+    <!-- <ul class="choices">  -->
+      <ul class="btn-grid choices btn"> 
         <!-- need to use JS to complete questions --> 
         <li><button class="btn">Answer 1</button></li>
         <li><button class="btn">Answer 2</button></li>
         <li><button class="btn">Answer 3</button></li>
-        <li><button class="btn">Answer 4</button></li>
+        <li><button class="btn">Answer 4</button></li> 
     </ul>
 
     </section>
@@ -40,21 +39,24 @@
         <div class= "card timer">
             <div class = "timer-text">
             <div class="large-font timer-count">30</div>
-            <h3>seconds remaining</h3>
-          </div>
+            <p>seconds remaining</p>
+        </div>
     </section>
 
+</main>
+
+
     <section class="quiz-finished">
-        <h2>All Done!</h2>
+        <!-- <h2>All Done!</h2>
           <p>Your Final Score is:</p>
           <div>
             <p>Enter Initals:</p>
-            <!-- box for initials -->
+             box for initials
             <button>Submit</button>
-          </div>
+          </div> -->
 
 
-
+          <button class="start-btn">View High Scores</button>
 
 
     </section>
@@ -66,7 +68,7 @@
 
 
 
-  </main>
+ 
 
 
 

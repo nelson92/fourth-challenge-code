@@ -5,17 +5,19 @@
 
 
 .top-bar {
-  display: flex;
-  height: 20px;
+  display: flex; 
+  font-size: 30px;
+  /* height: 20px; */
   /* border: 1px solid black; */
-  justify-content: center;   
-  padding: 1%;
+  justify-content: center;    */
+  /* padding: 1%; */
+  text-align: center;
 }
 
 .start-btn {
   /* float:  */
   vertical-align: top;
-  margin-top: 0px;
+  /* margin-top: 0px; */
   justify-content: center;
   align-items: center; 
   /* margin-right: 0px; */
@@ -23,20 +25,28 @@
   height: 20px;
   /* border: 1px solid black;  */
   padding: 1%; 
+  margin: auto;
+  margin-bottom: 30px;
 
 } 
 
-/* body {
+main {
   display: flex;
-  justify-content: center;   align-items: center; 
-} */
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+body {
+  background-color: darkgrey;
+} 
 
 .container {
   /* display: flex; */
   max-width: 80%;
-  background-color: gray;
+  background-color: rgb(155, 211, 237);
   border-radius: 5px;
   padding: 10px;
+  margin: auto;
 }
 
 .btn-grid {
@@ -55,4 +65,41 @@
 
 .btn:hover {
   border-color: white;
+}
+
+.card {
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: rgb(155, 211, 237);
+  margin: auto; 
+  /* padding: 20px; */
+  width: 20vw;
+  height: 400px;
+}
+
+.word-guess {
+  width: 45vw;
+  height: 210px;
+  padding: 20px 10px 10px 10px;
+  text-align: left;
+}
+
+.timer-text {
+  padding: 55px;
+}
+
+.timer {
+  height: 200px;
+  margin: 30px;
+  margin-right: 150px;
+}
+
+.large-font {
+  font-size: 60px;
+  text-align: center;
+}
+.card p {
+  font-size: 30px;
+  text-align: center; 
+  margin: auto;
 }

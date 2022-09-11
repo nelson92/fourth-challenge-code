@@ -1,6 +1,9 @@
 var questionTitle = document.querySelector('.questionTitle')
 var choiceEl = document.querySelector('.choices')
 var startButton = document.querySelector(".start-btn");
+var timerElement = document.querySelector(".timer-count");
+var btnContainer = document.getElementsByClassName(".btn");
+
 
 var questions = [
   {
@@ -19,11 +22,6 @@ var questions = [
     answer: 4
   },
   {
-    question: "Arrays in JavaScript can be used to store _____.",
-    choices: ["1. numbers and strings", "2. other arrays", "3. booleans", "4. all of the above"],
-    answer: 4
-  },
-  {
     question: "String values must be enclosed within____ when being assigned to variables.",
     choices: ["1. commas", "2. curly brackets", "3. quotes", "4. paranthesis"],
     answer: 3
@@ -32,6 +30,11 @@ var questions = [
     question: "A very useful tool used during development and debugging for printing content to the debugger is:",
     choices: ["1. JavaScript", "2. terminal/bash", "3. for loops", "4. console.log"],
     answer: 4
+  },
+  {
+    question: "All done! Your Final score is:"
+    // choices: ["Enter Initials: "],
+    // answer: 4
   }
 ]
 
@@ -53,12 +56,13 @@ console.log(this)
 }
 
 function startGame() {
-  isWin = false;
+  // isWin = false;
   timerCount = 30;
   // Prevents start button from being clicked when round is in progress
   startButton.disabled = true;
-  renderBlanks()
+  // renderBlanks()
   startTimer()
+  // 1000);
 }
 
 
@@ -69,12 +73,15 @@ function displayQuestion() {
   console.log(questionIndex)
   //display question
   questionTitle.textContent = questions[questionIndex].question
+  // btnContainer.
+  // btnContainer.add();
 
   //display choices
   //loop through choices array 
   var choices = questions[questionIndex].choices
 
-  choiceEl.textContent = ''
+  choiceEl.textContent = ' '
+
   for (var i = 0; i < choices.length; i++) {
     //for each choice: 
     //create a li item
@@ -86,5 +93,33 @@ function displayQuestion() {
     li.onclick = checkAnswer;
   }
 }
+
+
+function startTimer() {
+  // Sets timer
+  timer = setInterval(function() {
+    timerCount--;
+    timerElement.textContent = timerCount;
+    // if (timerCount >= 0) {
+      // Tests if win condition is met
+      // if (isWin && timerCount > 0) {
+        // Clears interval and stops timer
+        // clearInterval(timer);
+        // winGame();
+      // }
+      // )
+    // }
+    // Tests if time has run out
+    if (timerCount === 0) {
+      // Clears interval
+      clearInterval(timer);
+      // loseGame();
+    }
+  }, 1000);
+}
+
+
+
+
 
 displayQuestion()
