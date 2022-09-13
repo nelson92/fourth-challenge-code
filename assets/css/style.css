@@ -9,7 +9,7 @@
   font-size: 30px;
   /* height: 20px; */
   /* border: 1px solid black; */
-  justify-content: center;    */
+  justify-content: center;    
   /* padding: 1%; */
   text-align: center;
 }
@@ -102,4 +102,18 @@ body {
   font-size: 30px;
   text-align: center; 
   margin: auto;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+#intro {
+  font-size: 100px;
+  text-align: center;
+
 }
